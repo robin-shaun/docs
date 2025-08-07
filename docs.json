@@ -22,7 +22,7 @@
                             "group": "欢迎使用天智MaaS平台",
                             "pages": [
                                 "zh-hans/introduction",
-                                "zh-hans/guides/model-configuration/readme"   
+                                "zh-hans/guides/model-configuration"   
                             ]
                         },
                         "zh-hans/openapi-api-access-readme"
@@ -97,8 +97,7 @@
                                         "zh-hans/guides/workflow/debug-and-preview/variable-inspect"
                                     ]
                                 },
-                                "zh-hans/guides/workflow/publish",
-                                "zh-hans/guides/workflow/structured-outputs"
+                                "zh-hans/guides/workflow/publish"
                             ]
                         },
                         {
@@ -132,7 +131,6 @@
                                 "zh-hans/guides/knowledge-base/metadata",
                                 "zh-hans/guides/knowledge-base/integrate-knowledge-within-application",
                                 "zh-hans/guides/knowledge-base/retrieval-test-and-citation",
-                                "zh-hans/guides/knowledge-base/knowledge-request-rate-limit",
                                 "zh-hans/guides/knowledge-base/connect-external-knowledge-base",
                                 "zh-hans/guides/knowledge-base/api-documentation/external-knowledge-api-documentation"
                             ]
