@@ -21,8 +21,7 @@
                         {
                             "group": "欢迎使用天智MaaS平台",
                             "pages": [
-                                "zh-hans/introduction",
-                                "zh-hans/getting-started/readme/model-providers"
+                                "zh-hans/introduction"
                             ]
                         },
                         "zh-hans/openapi-api-access-readme"
@@ -117,8 +116,7 @@
                                     ]
                                 },
                                 "zh-hans/guides/workflow/publish",
-                                "zh-hans/guides/workflow/structured-outputs",
-                                "zh-hans/guides/workflow/bulletin"
+                                "zh-hans/guides/workflow/structured-outputs"
                             ]
                         },
                         {
@@ -474,21 +472,6 @@
                             ]
                         }
                     ]
-                },
-                {
-                    "group": "政策",
-                    "pages": [
-                        "zh-hans/policies/open-source",
-                        {
-                            "group": "用户协议",
-                            "pages": [
-                                "zh-hans/policies/agreement/README",
-                                "zh-hans/policies/agreement/tos",
-                                "zh-hans/policies/agreement/privacy",
-                                "zh-hans/policies/agreement/get-compliance-report"
-                            ]
-                        }
-                    ]
                 }
             ]
         },
@@ -647,11 +630,9 @@
             ]
         },
         {
-            "tab": "资源",
+            "tab": "术语",
             "pages": [
-                "zh-hans/resources/termbase",
-                "zh-hans/resources/about-dify/dify-brand-guidelines",
-                "zh-hans/resources/about-dify/dify-brand-usage-terms"
+                "zh-hans/resources/termbase"
             ]
                     }
                 ]
