@@ -19,22 +19,10 @@
                     "group": "入门",
                     "pages": [
                         {
-                            "group": "欢迎使用 Dify",
+                            "group": "欢迎使用天智MaaS平台",
                             "pages": [
                                 "zh-hans/introduction",
                                 "zh-hans/getting-started/readme/model-providers"
-                            ]
-                        },
-                        {
-                            "group": "Dify 社区版",
-                            "pages": [
-                                "zh-hans/getting-started/install-self-hosted/readme",
-                                "zh-hans/getting-started/install-self-hosted/docker-compose",
-                                "zh-hans/getting-started/install-self-hosted/local-source-code",
-                                "zh-hans/getting-started/install-self-hosted/bt-panel",
-                                "zh-hans/getting-started/install-self-hosted/start-the-frontend-docker-container",
-                                "zh-hans/getting-started/install-self-hosted/environments",
-                                "zh-hans/getting-started/install-self-hosted/faq"
                             ]
                         },
                         "zh-hans/openapi-api-access-readme"
