@@ -21,27 +21,16 @@
                         {
                             "group": "欢迎使用天智MaaS平台",
                             "pages": [
-                                "zh-hans/introduction"
+                                "zh-hans/introduction",
+                                "zh-hans/guides/model-configuration/"   
                             ]
                         },
                         "zh-hans/openapi-api-access-readme"
-                    ]
+                 ]
                 },
                 {
                     "group": "手册",
                     "pages": [
-                        {
-                            "group": "接入大模型",
-                            "pages": [
-                                "zh-hans/guides/model-configuration/readme",
-                                "zh-hans/guides/model-configuration/new-provider",
-                                "zh-hans/guides/model-configuration/predefined-model",
-                                "zh-hans/guides/model-configuration/customizable-model",
-                                "zh-hans/guides/model-configuration/interfaces",
-                                "zh-hans/guides/model-configuration/schema",
-                                "zh-hans/guides/model-configuration/load-balancing"
-                            ]
-                        },
                         {
                             "group": "构建应用",
                             "pages": [
