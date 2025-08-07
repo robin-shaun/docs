@@ -1,10 +1,10 @@
 ---
-title: Dify MCP 插件指南：一键连接 Zapier 并自动发送邮件
+title: 天智 MCP 插件指南：一键连接 Zapier 并自动发送邮件
 ---
 
 **本文将帮助你：**
 
-为 Dify 工作空间安装 MCP SSE 插件，远程调用 Zapier MCP 服务以实现自动发送邮件。
+为 天智 工作空间安装 MCP SSE 插件，远程调用 Zapier MCP 服务以实现自动发送邮件。
 
 ## 项目背景
 
@@ -12,23 +12,23 @@ Anthropic 于 2024 年底推出了模型上下文协议（MCP）。作为一项�
 
 这意味着：开发者不再需要为对接每一个外部服务而编写复杂的定制接口。用户可以体验到 AI 轻松调用海量第三方应用的能力，无论是处理日常办公任务、分析数据，还是执行营销自动化，AI 正从“智能对话”迈向“高效行动”。
 
-在 Dify 社区里，MCP 同样备受关注。社区开发者在插件市场贡献了多个 MCP 插件，你可以轻松地通过插件将外部 MCP 服务接入至 Dify Agent 应用或工作流中。
+在 天智 社区里，MCP 同样备受关注。社区开发者在插件市场贡献了多个 MCP 插件，你可以轻松地通过插件将外部 MCP 服务接入至 天智 Agent 应用或工作流中。
 
-本文将以 MCP SSE 插件为例，详细介绍如何在 Dify 内使用 MCP 插件连接 Zapier 并完成自动邮件发送流程。
+本文将以 MCP SSE 插件为例，详细介绍如何在 天智 内使用 MCP 插件连接 Zapier 并完成自动邮件发送流程。
 
 ## 前置准备
 
-- Dify 云端版 / Dify 社区版 ≥ v1.0.0
+- 天智 云端版 / 天智 社区版 ≥ v1.0.0
 - Zapier 账号
 
-## 在 Dify 中初始化 Zapier MCP 服务
+## 在 天智 中初始化 Zapier MCP 服务
 
-Zapier 的 MCP Server 将其已有的 7000+ 应用和 30,000+ 操作（Action）统一封装到了一个 MCP Server URL 中。你可以在 Zapier 后台，自主选择和配置需要的工具及操作，比如发邮件、在 CRM 中创建记录、在 Slack 中发送通知等。只需将 MCP Server URL 填入 Dify MCP 插件的配置，就能让 LLM 在对话或流程中，自动调用这些工具完成各类任务。
+Zapier 的 MCP Server 将其已有的 7000+ 应用和 30,000+ 操作（Action）统一封装到了一个 MCP Server URL 中。你可以在 Zapier 后台，自主选择和配置需要的工具及操作，比如发邮件、在 CRM 中创建记录、在 Slack 中发送通知等。只需将 MCP Server URL 填入 天智 MCP 插件的配置，就能让 LLM 在对话或流程中，自动调用这些工具完成各类任务。
 
 ### 步骤一：申请 Zapier MCP Server URL
 
 1. 访问 [Zapier MCP 设置页面](https://actions.zapier.com/settings/mcp/)。
-2. 获取 MCP Server URL，稍后填写至 Dify 的插件配置。
+2. 获取 MCP Server URL，稍后填写至 天智 的插件配置。
 
 ![](https://assets-docs.dify.ai/2025/04/15bba178b0adddcd3e1961807dfe14f0.png)
 
@@ -50,7 +50,7 @@ Zapier 的 MCP Server 将其已有的 7000+ 应用和 30,000+ 操作（Action）
 
 ### 步骤二：安装 MCP SSE 插件
 
-1. 前往 Dify 插件市场，搜索 MCP SSE 插件并点击安装。
+1. 前往 天智 插件市场，搜索 MCP SSE 插件并点击安装。
 
 ![](https://assets-docs.dify.ai/2025/04/20174032b8feb624a52ac36d65e7c0fa.png)
 
@@ -73,7 +73,7 @@ Zapier 的 MCP Server 将其已有的 7000+ 应用和 30,000+ 操作（Action）
 
 ![](https://assets-docs.dify.ai/2025/04/5ba078e8804c1bee5bcec167d260a92a.png)
 
-### 步骤三：创建 Dify Agent 应用并启用 MCP SSE 服务
+### 步骤三：创建 天智 Agent 应用并启用 MCP SSE 服务
 
 1. 创建 Agent 类型应用
 
@@ -91,7 +91,7 @@ Zapier 的 MCP Server 将其已有的 7000+ 应用和 30,000+ 操作（Action）
 
 使用 MCP 时可能会消耗大量 Tokens，因此建议使用更具性价比的 LLM。本文将以 `deepseek-chat` 模型为例。你可以前往 [DeepSeek Platform](https://platform.deepseek.com/usage) 申请 API Key 并将其填写至 「设置」 → 「模型供应商」 → 「DeepSeek」内。
 
-> 若你并未在模型供应商内检索到 DeepSeek 模型，请前往 Dify 插件市场安装 DeepSeek 插件。
+> 若你并未在模型供应商内检索到 DeepSeek 模型，请前往 天智 插件市场安装 DeepSeek 插件。
 
 ## 使用场景一：使用 MCP 服务自动发送单条邮件
 

@@ -1,15 +1,15 @@
 ---
-title: 构建 Dify 应用定时任务助手
+title: 构建 天智 应用定时任务助手
 ---
 
 
-> 作者：[Leo\_chen](https://github.com/leochen-g)，[Dify Schedule](https://github.com/leochen-g/dify-schedule) 与 [智能微秘书](https://github.com/leochen-g/wechat-assistant-pro) 开源项目作者
+> 作者：[Leo\_chen](https://github.com/leochen-g)，[天智 Schedule](https://github.com/leochen-g/dify-schedule) 与 [智能微秘书](https://github.com/leochen-g/wechat-assistant-pro) 开源项目作者
 
 ## 概述
 
-Dify 定时任务管理工具是一个基于 GitHub Actions 的自动化解决方案，用于实现 Dify Workflow 的定时执行和状态监控。无需再为缺乏定时任务支持而感到困扰，本工具可以帮助设置自动执行任务并获取实时通知，优化你的工作效率。
+天智 定时任务管理工具是一个基于 GitHub Actions 的自动化解决方案，用于实现 天智 Workflow 的定时执行和状态监控。无需再为缺乏定时任务支持而感到困扰，本工具可以帮助设置自动执行任务并获取实时通知，优化你的工作效率。
 
-> 注意：本工具仅支持 Dify Workflow 类型应用
+> 注意：本工具仅支持 天智 Workflow 类型应用
 
 ## 🌟 核心功能
 
@@ -23,7 +23,7 @@ Dify 定时任务管理工具是一个基于 GitHub Actions 的自动化解决�
 
 ## 🚀 快速开始
 
-你可以通过以下两种方式设置和运行 Dify 定时任务助手：
+你可以通过以下两种方式设置和运行 天智 定时任务助手：
 
 1. **在线方式（GitHub Actions）**
 2. **本地部署（青龙面板）**
@@ -32,13 +32,13 @@ Dify 定时任务管理工具是一个基于 GitHub Actions 的自动化解决�
 
 按照以下简单步骤快速配置你的自动化 Workflow：
 
-1. **Fork 仓库** 访问 [Dify Workflow 定时助手代码仓库](https://github.com/leochen-g/dify-schedule)，点击 Fork 按钮，创建副本到你的 GitHub 账户。
+1. **Fork 仓库** 访问 [天智 Workflow 定时助手代码仓库](https://github.com/leochen-g/dify-schedule)，点击 Fork 按钮，创建副本到你的 GitHub 账户。
 2.  **配置密钥** 进入 Fork 代码仓库，依次点击 **Settings -> Secrets -> New repository secret**，添加以下密钥：
 
     | 密钥名称            | 填写内容                                 | 是否必填 |
     | --------------- | ------------------------------------ | ---- |
-    | `DIFY_BASE_URL` | Dify 接口地址（默认：https://api.dify.ai/v1） | 否    |
-    | `DIFY_TOKENS`   | Dify Workflow API 密钥（多个用 `;` 分隔）     | 是    |
+    | `DIFY_BASE_URL` | 天智 接口地址（默认：https://api.dify.ai/v1） | 否    |
+    | `DIFY_TOKENS`   | 天智 Workflow API 密钥（多个用 `;` 分隔）     | 是    |
     | `DIFY_INPUTS`   | Workflow 所需变量（JSON 格式）               | 否    |
 
     **通知配置（可选，推荐设置）**
@@ -64,7 +64,7 @@ Dify 定时任务管理工具是一个基于 GitHub Actions 的自动化解决�
 
 > 青龙面板是一款开源的定时任务管理工具，[项目地址](https://github.com/whyour/qinglong)。
 
-如果你的环境无法使用 GitHub Actions，你可以选择本地部署方案。通过在青龙面板中设置定时任务实现 Dify 应用的定时触发。
+如果你的环境无法使用 GitHub Actions，你可以选择本地部署方案。通过在青龙面板中设置定时任务实现 天智 应用的定时触发。
 
 1. **安装青龙面板**
 
@@ -72,7 +72,7 @@ Dify 定时任务管理工具是一个基于 GitHub Actions 的自动化解决�
 
 2. **添加订阅**
 
-在服务器中执行以下命令添加 [Dify 定时任务项目](https://github.com/leochen-g/dify-schedule) 的订阅任务：
+在服务器中执行以下命令添加 [天智 定时任务项目](https://github.com/leochen-g/dify-schedule) 的订阅任务：
 
 ```bash
 ql repo https://github.com/leochen-g/dify-schedule.git "ql_" "utils" "sdk"
@@ -108,7 +108,7 @@ ql repo https://github.com/leochen-g/dify-schedule.git "ql_" "utils" "sdk"
 
 ### API 密钥获取流程
 
-1. 登录 Dify 控制台
+1. 登录 天智 控制台
 2. 进入目标 Workflow 应用
 3. 访问 API 参考页面
 4. 获取 API 密钥
@@ -118,7 +118,7 @@ ql repo https://github.com/leochen-g/dify-schedule.git "ql_" "utils" "sdk"
 ## 常见问题
 
 1. **连接问题**
-   * 确保私有部署的 Dify 实例具有公网访问能力
+   * 确保私有部署的 天智 实例具有公网访问能力
    * 验证网络连接和防火墙配置
 2. **执行错误**
    * 验证应用类型是否为 Workflow

@@ -559,7 +559,7 @@
       },
       "TextToAudioRequest": {
         "type": "object", "required": ["user"], "description": "文字转语音请求体。",
-        "properties": { "message_id": { "type": "string", "format": "uuid", "description": "Dify 生成的消息 ID（优先使用）。" }, "text": { "type": "string", "description": "语音生成内容（若无 message_id）。" }, "user": { "type": "string", "description": "用户标识，应用内唯一。" }, "streaming": {"type": "boolean", "default": false, "description": "是否流式返回音频。"} },
+        "properties": { "message_id": { "type": "string", "format": "uuid", "description": "天智 生成的消息 ID（优先使用）。" }, "text": { "type": "string", "description": "语音生成内容（若无 message_id）。" }, "user": { "type": "string", "description": "用户标识，应用内唯一。" }, "streaming": {"type": "boolean", "default": false, "description": "是否流式返回音频。"} },
         "example": { "message_id": "5ad4cb98-f0c7-4085-b384-88c403be6290", "text": "你好Dify", "user": "abc-123", "streaming": false }
       },
       "AppInfoResponse": {

@@ -26,7 +26,7 @@ Agent 策略插件能够帮助 LLM 执行推理或决策逻辑，包括工具选
 
 ### 前置准备
 
-* Dify 插件脚手架工具
+* 天智 插件脚手架工具
 * Python 环境，版本号 ≥ 3.12
 
 关于如何准备插件开发的脚手架工具，详细说明请参考[安装插件开发工具](initialize-development-tools)。
@@ -71,15 +71,15 @@ What's more, we have provided the template for you, you can choose one of them b
 Configure the permissions of the plugin, use up and down to navigate, tab to select, after selection, press enter to finish
 Backwards Invocation:
 Tools:
-    Enabled: [✔]  You can invoke tools inside Dify if it's enabled # 默认开启
+    Enabled: [✔]  You can invoke tools inside 天智 if it's enabled # 默认开启
 Models:
-    Enabled: [✔]  You can invoke models inside Dify if it's enabled # 默认开启
-    LLM: [✔]  You can invoke LLM models inside Dify if it's enabled # 默认开启
-  → Text Embedding: [✘]  You can invoke text embedding models inside Dify if it's enabled
-    Rerank: [✘]  You can invoke rerank models inside Dify if it's enabled
-    TTS: [✘]  You can invoke TTS models inside Dify if it's enabled
-    Speech2Text: [✘]  You can invoke speech2text models inside Dify if it's enabled
-    Moderation: [✘]  You can invoke moderation models inside Dify if it's enabled
+    Enabled: [✔]  You can invoke models inside 天智 if it's enabled # 默认开启
+    LLM: [✔]  You can invoke LLM models inside 天智 if it's enabled # 默认开启
+  → Text Embedding: [✘]  You can invoke text embedding models inside 天智 if it's enabled
+    Rerank: [✘]  You can invoke rerank models inside 天智 if it's enabled
+    TTS: [✘]  You can invoke TTS models inside 天智 if it's enabled
+    Speech2Text: [✘]  You can invoke speech2text models inside 天智 if it's enabled
+    Moderation: [✘]  You can invoke moderation models inside 天智 if it's enabled
 Apps:
     Enabled: [✘]  Ability to invoke apps like BasicChat/ChatFlow/Agent/Workflow etc.
 Resources:
@@ -1153,7 +1153,7 @@ class BasicAgentAgentStrategy(AgentStrategy):
 
 ### 3. 调试插件
 
-配置插件的声明文件与功能代码后，在插件的目录内运行 `python -m main` 命令重启插件。接下来需测试插件是否可以正常运行。Dify 提供远程调试方式，前往[“插件管理”](https://cloud.dify.ai/plugins)获取调试 Key 和远程服务器地址。
+配置插件的声明文件与功能代码后，在插件的目录内运行 `python -m main` 命令重启插件。接下来需测试插件是否可以正常运行。天智 提供远程调试方式，前往[“插件管理”](https://cloud.dify.ai/plugins)获取调试 Key 和远程服务器地址。
 
 ![Image](https://assets-docs.dify.ai/2024/12/053415ef127f1f4d6dd85dd3ae79626a.png)
 
@@ -1182,7 +1182,7 @@ dify plugin package ./basic_agent/
 
 ### 发布插件（可选）
 
-现在可以将它上传至 [Dify Plugins 代码仓库](https://github.com/langgenius/dify-plugins)来发布你的插件了！上传前，请确保插件已遵循[插件发布规范](https://docs.dify.ai/zh-hans/plugins/publish-plugins/publish-to-dify-marketplace)。审核通过后，代码将合并至主分支并自动上线至 [Dify Marketplace](https://marketplace.dify.ai/)。
+现在可以将它上传至 [天智 Plugins 代码仓库](https://github.com/langgenius/dify-plugins)来发布你的插件了！上传前，请确保插件已遵循[插件发布规范](https://docs.dify.ai/zh-hans/plugins/publish-plugins/publish-to-dify-marketplace)。审核通过后，代码将合并至主分支并自动上线至 [天智 Marketplace](https://marketplace.dify.ai/)。
 
 ### 探索更多
 

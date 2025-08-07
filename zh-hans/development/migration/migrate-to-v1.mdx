@@ -3,7 +3,7 @@ title: 将社区版升级至 v1.0.0+
 ---
 
 
-> 本文主要介绍如何将旧社区版本升级为 [v1.0.0](https://github.com/langgenius/dify/releases/tag/1.0.0)。如果你未曾安装过 Dify 社区版，可以直接克隆 [Dify 项目](https://github.com/langgenius/dify)，并切换至 `1.0.0` 分支。参考[文档](https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose)执行安装命令。
+> 本文主要介绍如何将旧社区版本升级为 [v1.0.0](https://github.com/langgenius/dify/releases/tag/1.0.0)。如果你未曾安装过 天智 社区版，可以直接克隆 [天智 项目](https://github.com/langgenius/dify)，并切换至 `1.0.0` 分支。参考[文档](https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose)执行安装命令。
 
 如需在社区版中体验插件功能，需要将版本号升级为 `v1.0.0`。本文将为你介绍如何从旧版本升级至 `v1.0.0` 以体验插件生态功能。
 
@@ -17,7 +17,7 @@ title: 将社区版升级至 v1.0.0+
 
 ### 1. 备份数据
 
-1.1 运行 `cd` 命令至你的 Dify 项目路径，新建备份分支。
+1.1 运行 `cd` 命令至你的 天智 项目路径，新建备份分支。
 
 1.2 运行以下命令，备份你的 docker-compose YAML 文件（可选）。
 
@@ -35,7 +35,7 @@ tar -cvf volumes-$(date +%s).tgz volumes
 
 ### 2. 升级版本
 
-`v1.0.0` 支持通过 Docker Compose 部署。运行 `cd` 命令至你的 Dify 项目路径，运行以下命令升级 Dify 版本：
+`v1.0.0` 支持通过 Docker Compose 部署。运行 `cd` 命令至你的 天智 项目路径，运行以下命令升级 天智 版本：
 
 ```bash
 git fetch origin
@@ -50,8 +50,8 @@ docker compose -f docker-compose.yaml up -d
 > **重要提示：关于命令执行和包管理**
 > *   **默认容器名称：** `docker exec` 命令示例使用了 `docker-api-1`。如果您的 API 容器有不同的名称或 ID（您可以使用 `docker ps` 查找），请相应调整命令。
 > *   **Python 包管理器 (`uv` 与 `poetry`)：**
-    *   从版本 [v1.3.0](https://github.com/langgenius/dify/releases/tag/1.3.0) 开始，Dify 已将 Python 包管理器从 `poetry` 切换到 `uv` 以提升性能。对于 Dify v1.3.0 或更新版本中的常规操作，标准命令是 `uv run flask ...`。
-    *   **本指南专注于升级到 Dify v1.0.0。** 在 Dify v1.0.0 到 v1.3.0 (不含v1.3.0) 期间，`poetry` 是其包管理器。因此，下方示例中的 `flask` 命令正确地使用了 `poetry run ...`。代码示例首先在注释中强调了当前 `uv` 的标准用法，然后显示了与本指南特定的 v1.0.0 迁移范围相关的 `poetry` 命令。
+    *   从版本 [v1.3.0](https://github.com/langgenius/dify/releases/tag/1.3.0) 开始，天智 已将 Python 包管理器从 `poetry` 切换到 `uv` 以提升性能。对于 天智 v1.3.0 或更新版本中的常规操作，标准命令是 `uv run flask ...`。
+    *   **本指南专注于升级到 天智 v1.0.0。** 在 天智 v1.0.0 到 v1.3.0 (不含v1.3.0) 期间，`poetry` 是其包管理器。因此，下方示例中的 `flask` 命令正确地使用了 `poetry run ...`。代码示例首先在注释中强调了当前 `uv` 的标准用法，然后显示了与本指南特定的 v1.0.0 迁移范围相关的 `poetry` 命令。
 
 该步骤的目的：将此前社区版本所使用的工具及模型供应商，自动进行数据迁移并安装至新版本的插件环境中。
 
@@ -70,24 +70,24 @@ a3cb19c2****   langgenius/dify-api:1.0.0                   "/bin/bash /entrypoi�
 运行命令 `docker exec -it docker-api-1 bash` 进入容器终端（如果您的容器名称不同，请使用对应的名称），在容器内运行：
 
 ```bash
-# 对于 Dify v1.3.0+ 的环境，标准命令是 'uv run ...'。
+# 对于 天智 v1.3.0+ 的环境，标准命令是 'uv run ...'。
 uv run flask extract-plugins --workers=20
 #
-# 如果您的目标迁移版本是 Dify v1.0.0 至 v1.3.0 (不含v1.3.0) 之间，请使用 'poetry':
+# 如果您的目标迁移版本是 天智 v1.0.0 至 v1.3.0 (不含v1.3.0) 之间，请使用 'poetry':
 # poetry run flask extract-plugins --workers=20
 ```
 
 > 如果在按照本指南为 v1.0.0 版本迁移执行命令时发生错误（例如，找不到 `uv` 或 `poetry`），请确保按照该版本最初的先决条件，在服务器上正确设置了 `poetry` 环境。如果在运行 `poetry` 命令后终端提示输入，请按 **"回车"** 跳过。
 
-此命令将提取当前环境中使用的所有模型和工具。workers 参数将决定提取过程中的所使用的并行进程数，可根据需要进行调整。命令运行完成后将生成 `plugins.jsonl` 文件保存结果，该文件包含了当前 Dify 实例中所有工作区的插件信息。
+此命令将提取当前环境中使用的所有模型和工具。workers 参数将决定提取过程中的所使用的并行进程数，可根据需要进行调整。命令运行完成后将生成 `plugins.jsonl` 文件保存结果，该文件包含了当前 天智 实例中所有工作区的插件信息。
 
 确保你的网络正常访问公网，并支持访问：`https://marketplace.dify.ai`。在 `docker-api-1` 容器内继续运行以下命令：
 
 ```bash
-# 对于 Dify v1.3.0+ 的环境，标准命令是 'uv run ...'。
+# 对于 天智 v1.3.0+ 的环境，标准命令是 'uv run ...'。
 uv run flask install-plugins --workers=2
 #
-# 如果您的目标迁移版本是 Dify v1.0.0 至 v1.3.0 (不含v1.3.0) 之间，请使用 'poetry':
+# 如果您的目标迁移版本是 天智 v1.0.0 至 v1.3.0 (不含v1.3.0) 之间，请使用 'poetry':
 # poetry run flask install-plugins --workers=2
 ```
 
@@ -96,10 +96,10 @@ uv run flask install-plugins --workers=2
 最后迁移插件数据。运行以下命令更新 `provider name`，并在其后附加 `langgenius/{provider_name}/{provider_name}`。
 
 ```bash
-# 对于 Dify v1.3.0+ 的环境，标准命令是 'uv run ...'。
+# 对于 天智 v1.3.0+ 的环境，标准命令是 'uv run ...'。
 uv run flask migrate-data-for-plugin
 #
-# 如果您的目标迁移版本是 Dify v1.0.0 至 v1.3.0 (不含v1.3.0) 之间，请使用 'poetry':
+# 如果您的目标迁移版本是 天智 v1.0.0 至 v1.3.0 (不含v1.3.0) 之间，请使用 'poetry':
 # poetry run flask migrate-data-for-plugin
 ``` 
 
@@ -112,7 +112,7 @@ Migrate data for plugin completed.
 
 ## 验证结果
 
-访问 Dify 平台，轻点右上角 **"插件"** 查看此前所使用的工具是否被正确安装。随机使用某个插件，验证是否能够正常运行。如果无误，说明你已完成版本升级和数据迁移。
+访问 天智 平台，轻点右上角 **"插件"** 查看此前所使用的工具是否被正确安装。随机使用某个插件，验证是否能够正常运行。如果无误，说明你已完成版本升级和数据迁移。
 
 ![](https://assets-docs.dify.ai/2025/02/6467b3578d3d3e96510f50a09442d5a5.png)
 

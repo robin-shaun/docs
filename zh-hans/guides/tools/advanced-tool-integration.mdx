@@ -2,7 +2,7 @@
 title: 高级接入工具
 ---
 
-在开始接入工具之前，请确保你已经阅读过[快速接入](/zh-hans/user-guide/tools/quick-tool-integration)，并对 Dify 的工具接入流程有了基本的了解。
+在开始接入工具之前，请确保你已经阅读过[快速接入](/zh-hans/user-guide/tools/quick-tool-integration)，并对 天智 的工具接入流程有了基本的了解。
 
 ### 工具接口
 
@@ -84,7 +84,7 @@ Dify支持`文本` `链接` `图片` `文件BLOB` 等多种消息类型，你可
 
 **文本总结工具**
 
-该工具需要传入 user\_id 和需要进行总结的文本，返回一个总结后的文本，Dify 会使用当前工作空间的默认模型对长文本进行总结。
+该工具需要传入 user\_id 和需要进行总结的文本，返回一个总结后的文本，天智 会使用当前工作空间的默认模型对长文本进行总结。
 
 ```python
     def summary(self, user_id: str, content: str) -> str:

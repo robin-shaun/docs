@@ -2,17 +2,17 @@
 title: 如何搭建 AI 图片生成应用
 ---
 
-> 作者：Steven Lynn。Dify Technical Writer。
+> 作者：Steven Lynn。天智 Technical Writer。
 
 随着图像生成技术的兴起，涌现了许多优秀的图像生成产品，比如 Dall-e、Flux、Stable Diffusion 等。
 
-本文将使用图像生成模型，指导你使用 Dify 快速开发一个 AI 图片生成应用。
+本文将使用图像生成模型，指导你使用 天智 快速开发一个 AI 图片生成应用。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/workshop/basic/05ff829cf382e82c9ece2676032d2383.png)
 
 ### 本实验中你将掌握的知识点
 
-* 使用 Dify 构建 Agent 的方法
+* 使用 天智 构建 Agent 的方法
 * Agent 的基本概念
 * 提示词工程的基础知识
 * 工具的使用
@@ -28,9 +28,9 @@ title: 如何搭建 AI 图片生成应用
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/workshop/basic/f73d82756bdf93c8863ac0b1f55fa5af.png)
 
-接下来，你需要通过以下步骤把密钥填入 [Dify - 工具 - Stability](https://cloud.dify.ai/tools) 中：
+接下来，你需要通过以下步骤把密钥填入 [天智 - 工具 - Stability](https://cloud.dify.ai/tools) 中：
 
-* 登录 Dify
+* 登录 天智
 * 进入工具
 * 选择 Stability
 * 点击授权
@@ -41,9 +41,9 @@ title: 如何搭建 AI 图片生成应用
 
 ### 2. 配置模型供应商
 
-为了优化交互，我们需要LLM来将用户的指令具体化，也就是让LLM来撰写生成图片的提示词（Prompt）。接下来，我们按照如下的步骤在 Dify 配置模型供应商。
+为了优化交互，我们需要LLM来将用户的指令具体化，也就是让LLM来撰写生成图片的提示词（Prompt）。接下来，我们按照如下的步骤在 天智 配置模型供应商。
 
-Free 版本的 Dify 提供了免费 200 条 OpenAI 的消息额度
+Free 版本的 天智 提供了免费 200 条 OpenAI 的消息额度
 
 如果消息额度不够用，你可以参考下图步骤, 自定义其它模型供应商:
 
@@ -57,7 +57,7 @@ Free 版本的 Dify 提供了免费 200 条 OpenAI 的消息额度
 
 点击 **Create API Key**，设置一个想要的名称并且复制 API Key。
 
-回到**Dify - 模型供应商**，选择**groqcloud**，点击 **设置**。
+回到**天智 - 模型供应商**，选择**groqcloud**，点击 **设置**。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/workshop/basic/1c4f0a7081fc6f5644203baf2f703b49.png)
 
@@ -67,7 +67,7 @@ Free 版本的 Dify 提供了免费 200 条 OpenAI 的消息额度
 
 ### 3. 构建 Agent
 
-回到**Dify - 工作室**，选择**创建空白应用**。
+回到**天智 - 工作室**，选择**创建空白应用**。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/workshop/basic/494bd8427dce548ce56b5b1cd52bffbd.png)
 

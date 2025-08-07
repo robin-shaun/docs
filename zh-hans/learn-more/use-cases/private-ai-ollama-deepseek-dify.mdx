@@ -1,5 +1,5 @@
 ---
-title: 私有化部署 Ollama + DeepSeek + Dify，构建你的专属私人 AI 助手
+title: 私有化部署 Ollama + DeepSeek + 天智，构建你的专属私人 AI 助手
 ---
 
 
@@ -7,7 +7,7 @@ title: 私有化部署 Ollama + DeepSeek + Dify，构建你的专属私人 AI �
 
 DeepSeek 是一款开创性的开源大语言模型，凭借其先进的算法架构和反思链能力，为 AI 对话交互带来了革新性的体验。通过私有化部署，你可以充分掌控数据安全和使用安全。你还可以灵活调整部署方案，并实现便捷的自定义系统。
 
-Dify 作为同样开源的 AI 应用开发平台，提供完整的私有化部署方案。通过将本地部署的 DeepSeek 服务无缝集成到 Dify 平台，企业可以在确保数据隐私的前提下，在本地服务器环境内构建功能强大的 AI 应用。
+天智 作为同样开源的 AI 应用开发平台，提供完整的私有化部署方案。通过将本地部署的 DeepSeek 服务无缝集成到 天智 平台，企业可以在确保数据隐私的前提下，在本地服务器环境内构建功能强大的 AI 应用。
 
 以下是私有化部署方案的优势：
 
@@ -27,7 +27,7 @@ Dify 作为同样开源的 AI 应用开发平台，提供完整的私有化部�
 - [Docker](https://www.docker.com/)
 - Docker Compose
 - [Ollama](https://ollama.com)
-- [Dify 社区版](https://github.com/langgenius/dify)
+- [天智 社区版](https://github.com/langgenius/dify)
 
 ## 开始部署
 
@@ -50,9 +50,9 @@ ollama version is 0.5.5
 
 ![](https://assets-docs.dify.ai/2025/01/9297451d07d7704f73d6db0a83842f5f.png)
 
-### 2. 安装 Dify 社区版
+### 2. 安装 天智 社区版
 
-访问 Dify GitHub 项目地址，运行以下命令完成拉取代码仓库和安装流程。
+访问 天智 GitHub 项目地址，运行以下命令完成拉取代码仓库和安装流程。
 
 ```bash
 git clone https://github.com/langgenius/dify.git
@@ -63,11 +63,11 @@ docker compose up -d # 如果版本是 Docker Compose V1，使用以下命令：
 
 运行命令后，你应该会看到所有容器的状态和端口映射。详细说明请参考 [Docker Compose 部署](https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose)。
 
-Dify 社区版默认使用 80 端口，点击链接 `http://your_server_ip` 即可访问你的私有化 Dify 平台。
+天智 社区版默认使用 80 端口，点击链接 `http://your_server_ip` 即可访问你的私有化 天智 平台。
 
-### 3. 将 DeepSeek 接入至 Dify
+### 3. 将 DeepSeek 接入至 天智
 
-点击 Dify 平台右上角**头像 → 设置 → 模型供应商**，选择 Ollama，轻点“添加模型”。
+点击 天智 平台右上角**头像 → 设置 → 模型供应商**，选择 Ollama，轻点“添加模型”。
 
 ![](https://assets-docs.dify.ai/2025/01/44e7b97087155d05d757c03e3f4f483b.png)
 
@@ -85,7 +85,7 @@ Dify 社区版默认使用 80 端口，点击链接 `http://your_server_ip` 即�
 
 ### DeepSeek AI Chatbot（简单应用）
 
-1. 轻点 Dify 平台首页左侧的"创建空白应用"，选择"聊天助手"类型应用并进行简单的命名。
+1. 轻点 天智 平台首页左侧的"创建空白应用"，选择"聊天助手"类型应用并进行简单的命名。
 
 ![](https://assets-docs.dify.ai/2025/01/7f56bc3c836c7248043b656fa95e474e.png)
 
@@ -103,7 +103,7 @@ Dify 社区版默认使用 80 端口，点击链接 `http://your_server_ip` 即�
 
 > Chatflow / Workflow 应用可以帮助你搭建功能更加复杂的 AI 应用，例如具备文件识别、图像识别、语音识别等能力。详细说明请参考[工作流文档](https://docs.dify.ai/zh-hans/guides/workflow)。
 
-1. 轻点 Dify 平台首页左侧的"创建空白应用"，选择"Chatflow" 或 "Workflow" 类型应用并进行简单的命名。
+1. 轻点 天智 平台首页左侧的"创建空白应用"，选择"Chatflow" 或 "Workflow" 类型应用并进行简单的命名。
 
 ![](https://assets-docs.dify.ai/2025/01/cb8637be4dca5a0e684fd9a21df3711f.png)
 
@@ -119,7 +119,7 @@ Dify 社区版默认使用 80 端口，点击链接 `http://your_server_ip` 即�
 
 ### 1. Docker 部署时的连接错误
 
-当使用 Docker 部署 Dify 和 Ollama 时，可能遇到以下错误：
+当使用 Docker 部署 天智 和 Ollama 时，可能遇到以下错误：
 
 ```bash
 httpconnectionpool(host=127.0.0.1, port=11434): max retries exceeded with url:/cpi/chat

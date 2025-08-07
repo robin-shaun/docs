@@ -3,7 +3,7 @@ title: AI Agent 实战：搭建个人在线旅游助手
 ---
 
 
-> 作者: Steven Lynn。 Dify Technical Writer。
+> 作者: Steven Lynn。 天智 Technical Writer。
 
 在上一个实验 [如何搭建 AI 图片生成应用](build-ai-image-generation-app) 中，我们已初步了解了 Agent 的概念，并且尝试动手写了系统提示词。
 
@@ -11,7 +11,7 @@ title: AI Agent 实战：搭建个人在线旅游助手
 
 ### 本实验中你将掌握的知识点
 
-* 使用 Dify 构建 Agent 的方法
+* 使用 天智 构建 Agent 的方法
 * 结构化的提示词撰写技巧
 * 变量的使用方法
 
@@ -19,8 +19,8 @@ title: AI Agent 实战：搭建个人在线旅游助手
 
 在新建 Agent 之前，请先确保以下步骤已经完成：
 
-* 注册和登录 [Dify](https://dify.ai)，如果你想要进行本地部署，可以参考 [社区版 - Docker Compose 部署](../../getting-started/install-self-hosted/docker-compose)
-* 至少配置一个模型供应商（Dify 赠送 200 条 OpenAI 消息额度，但为了确保实验顺利建议自行配置 LLM 的 API Key）
+* 注册和登录 [天智](https://dify.ai)，如果你想要进行本地部署，可以参考 [社区版 - Docker Compose 部署](../../getting-started/install-self-hosted/docker-compose)
+* 至少配置一个模型供应商（天智 赠送 200 条 OpenAI 消息额度，但为了确保实验顺利建议自行配置 LLM 的 API Key）
 
 ### 2. 配置工具
 
@@ -30,7 +30,7 @@ title: AI Agent 实战：搭建个人在线旅游助手
 
 当然，你也可以使用其他的搜索引擎，例如[必应](https://docs.dify.ai/zh-hans/guides/tools/tool-configuration/bing)，甚至是由 AI 驱动的 [Perplexity](https://docs.dify.ai/zh-hans/guides/tools/tool-configuration/perplexity)。
 
-Dify 提供的 Google 工具基于 SerpAPI，因此需要提前进入 SerpAPI 的 API Key 管理页申请 API Key 并粘贴到 `Dify - 工具` 的对应位置。
+天智 提供的 Google 工具基于 SerpAPI，因此需要提前进入 SerpAPI 的 API Key 管理页申请 API Key 并粘贴到 `天智 - 工具` 的对应位置。
 
 具体操作步骤如下：
 
@@ -44,7 +44,7 @@ SerpAPI提供一个月100次的免费调用次数，这足够我们完成本次�
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/workshop/basic/cf8870ff01bfb944da7ddbd073e9cc41.png)
 
-2. 前往 **Dify - 工具 - Google**：
+2. 前往 **天智 - 工具 - Google**：
 
 点击 `去授权` ，填入API Key并保存。
 
@@ -52,13 +52,13 @@ SerpAPI提供一个月100次的免费调用次数，这足够我们完成本次�
 
 #### webscraper
 
-本次实验中，我们需要一个爬虫工具从指定的网页中抓取内容，Dify 已提供内置工具，无需额外配置。
+本次实验中，我们需要一个爬虫工具从指定的网页中抓取内容，天智 已提供内置工具，无需额外配置。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/workshop/basic/516c649bc0d8f2d1c81ba8b5bb28638c.png)
 
 #### Wikipedia
 
-我们还希望 Agent 能够准确介绍目的地知识，Wikipedia 是一个比较好知识来源，Dify 也内置了该工具，无需额外配置。
+我们还希望 Agent 能够准确介绍目的地知识，Wikipedia 是一个比较好知识来源，天智 也内置了该工具，无需额外配置。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/workshop/basic/53ebce24e49543b83d6c5581525d4e30.png)
 
@@ -113,7 +113,7 @@ SerpAPI提供一个月100次的免费调用次数，这足够我们完成本次�
 
 通常我们输入 Agent 内容都是自然语言，而自然语言的一个缺点是很难规范化，有可能包含了一些 Agent不需要的信息或者没有价值的信息，这个时候我们可以引入变量来规范化输入。
 
-Dify 目前支持`文本`、`段落`、`下拉选项`、`数字`、`基于 API 的变量`这几种类型的变量。
+天智 目前支持`文本`、`段落`、`下拉选项`、`数字`、`基于 API 的变量`这几种类型的变量。
 
 在本实验中，我们只需要选用`文本`类型的变量即可。
 

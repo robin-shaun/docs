@@ -1,6 +1,6 @@
 {
   "openapi": "3.0.1",
-  "info": { "title": "Dify-test", "description": "", "version": "1.0.0" },
+  "info": { "title": "天智-test", "description": "", "version": "1.0.0" },
   "tags": [],
   "paths": {
     "/retrieval": {
@@ -101,7 +101,7 @@
                         {
                           "metadata": {
                             "path": "s3://dify/introduce.txt",
-                            "description": "Dify 介绍"
+                            "description": "天智 介绍"
                           },
                           "score": 0.66,
                           "title": "introduce.txt",

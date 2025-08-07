@@ -7,7 +7,7 @@ description: 作者：[Alec Lee](mailto:alec.lee1005@gmail.com)｜AX 全球战�
 
 ![TEN AgentTalk](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/053TrulienceDifyFinal.jpg)
 
-本项目所涉及的产品：Dify × TEN × Trulience × Azure × Agora × OpenAI。
+本项目所涉及的产品：天智 × TEN × Trulience × Azure × Agora × OpenAI。
 
 ---
 
@@ -29,7 +29,7 @@ description: 作者：[Alec Lee](mailto:alec.lee1005@gmail.com)｜AX 全球战�
 
 ### 📌 各平台功能说明：
 
-- **Dify + OpenAI**：搭建智能体，支持调用企业内部数据与 OpenAI API，并向 TEN 提供统一的对话接口（API）。
+- **天智 + OpenAI**：搭建智能体，支持调用企业内部数据与 OpenAI API，并向 TEN 提供统一的对话接口（API）。
 
 - **Trulience**：提供数字人演绎能力，向 TEN 提供数字人 ID 与访问 Token，用于虚拟形象呈现。
 
@@ -45,39 +45,39 @@ description: 作者：[Alec Lee](mailto:alec.lee1005@gmail.com)｜AX 全球战�
 
 ## 搭建销售智能体“大脑”
 
-我们首先将在 Dify 上完成三步操作，搭建出一个基于内部数据的 AI Sales Avatar “Vendy 本体”。  
+我们首先将在 天智 上完成三步操作，搭建出一个基于内部数据的 AI Sales Avatar “Vendy 本体”。  
 
 ---
 
-### 🧩 Step 1：注册 Dify 账号并配置模型 API
+### 🧩 Step 1：注册 天智 账号并配置模型 API
 
-👉 打开 [Dify 官网](https://dify.ai)，点击右上角 “Get Started”，开始注册流程。
+👉 打开 [天智 官网](https://dify.ai)，点击右上角 “Get Started”，开始注册流程。
 
-登录 Dify 后，在左侧菜单点击 **「Settings > Model Provider」（模型提供商）**。在页面中找到 **OpenAI** 模块，点击 **Install** 进行安装。
+登录 天智 后，在左侧菜单点击 **「Settings > Model Provider」（模型提供商）**。在页面中找到 **OpenAI** 模块，点击 **Install** 进行安装。
 
-![Dify Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/005DifyModels.jpg)
+![天智 Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/005DifyModels.jpg)
 
 在 **OpenAI** 模块中，点击蓝色链接 **「Get your API Key from OpenAI」**，系统会自动跳转到 [OpenAI 官方平台](https://platform.openai.com/api-keys)。
 
-![Dify OpenAI](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/006DifyOpenAI.jpg)
+![天智 OpenAI](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/006DifyOpenAI.jpg)
 
 在 OpenAI 上点击 **「+ Create new secret key」** 生成新的 API 密钥。
 
-复制生成的 Key，并返回 Dify，在 OpenAI 模块中粘贴如下字段：
+复制生成的 Key，并返回 天智，在 OpenAI 模块中粘贴如下字段：
 
-![Dify OpenAI Key](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/007DifyOpenAIKey.jpg)
+![天智 OpenAI Key](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/007DifyOpenAIKey.jpg)
 
 完成模型配置后，我们已经准备好了运行环境，  
-现在可以开始在 Dify 上构建 AI Sales Avatar 的知识本体了。
+现在可以开始在 天智 上构建 AI Sales Avatar 的知识本体了。
 
 ---
 
 ### 🧩 Step 2：上传 AI Sales Avatar 所需的内部资料（知识文档）
 
-在 Dify 控制台顶部菜单，点击 **「Knowledge」**，  
+在 天智 控制台顶部菜单，点击 **「Knowledge」**，  
 然后点击 **「Create Knowledge」** 创建一个新的知识数据集。
 
-![Dify Data](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/008Difydatasets.jpg)
+![天智 Data](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/008Difydatasets.jpg)
 
 在接下来的页面中，选择资料上传方式，推荐使用 **「Import from file」** 方式。
 
@@ -92,17 +92,17 @@ description: 作者：[Alec Lee](mailto:alec.lee1005@gmail.com)｜AX 全球战�
 
 ![ChatGPTUpload](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/010DifydataChatGPT.jpg)
 
-下载好文档后，回到 Dify 上传页面，选择 **「Import from file」**，上传该文件。  
+下载好文档后，回到 天智 上传页面，选择 **「Import from file」**，上传该文件。  
 上传成功后，点击右下角的 **「Next」**，继续下一步设置。
 
-![Dify Next](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/011DifyImportNext.jpg)
+![天智 Next](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/011DifyImportNext.jpg)
 
 默认设置已经适用于大多数场景，建议保持原样，直接点击 **「Save & Process」** 即可。  
 （如需后续提升智能体的理解精度，也可根据实际需求调整相关参数）
 
-![Dify 知识库配置保存与处理](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/012DifyEmbedding.jpg)
+![天智 知识库配置保存与处理](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/012DifyEmbedding.jpg)
 
-✅ 若你看到以下页面，表示你的文档已经成功上传并被 Dify 系统解析完成。
+✅ 若你看到以下页面，表示你的文档已经成功上传并被 天智 系统解析完成。
 
 ![DifydataSet](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/013DifyDataUploadSucess.jpg)
 
@@ -113,7 +113,7 @@ description: 作者：[Alec Lee](mailto:alec.lee1005@gmail.com)｜AX 全球战�
 
 ### 🧩 Step 3：创建智能体 App，并接入知识库
 
-进入 Dify 控制台，点击顶部菜单栏的 **「Studio」**，再点击右上角的 **「Create」** 创建新 App。
+进入 天智 控制台，点击顶部菜单栏的 **「Studio」**，再点击右上角的 **「Create」** 创建新 App。
 
 在弹出窗口中填写以下内容：
 
@@ -137,21 +137,21 @@ Your task is to provide information about luxury cars to the customers based on 
 
 👇 配置界面如下所示：
 
-![Dify AvatarData](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/015DifyAvatarData.jpg)
+![天智 AvatarData](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/015DifyAvatarData.jpg)
 
 配置完成后，可以在右侧输入框测试是否能正常调用知识库内容。  
 如果返回的内容基于上传的文档，就说明智能体连接成功 ✅
 
 测试无误后，点击右上角的 **「Publish」**，发布这个 AI 应用。
 
-![Dify AvatarTest](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/016DifyAvataRunTest.jpg)
+![天智 AvatarTest](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/016DifyAvataRunTest.jpg)
 
 应用发布后，点击左侧菜单栏中的 **「API Access」**，进入后点击右上角的 **「Create Secret Key」**。
 这个 API Key 是后续在 TEN 平台接入时必须使用的，请务必复制保存好。
 
 👇 接口密钥生成界面如下所示：
 
-![Dify API Key](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/018DifyAPI2.jpg)
+![天智 API Key](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/018DifyAPI2.jpg)
 
 🎉 恭喜你！至此，我们已经完成了 AI Sales Avatar 的“智能体本体”搭建，  
 并成功获得了用于调用的 API Key。
@@ -219,7 +219,7 @@ Your task is to provide information about luxury cars to the customers based on 
 
 ### 🧩 Step 5：申请 Agora 与 Azure Speech
 
-在将 Dify 的智能体、Trulience 的数字人接入 TEN 平台之前，我们需要提前准备好语音通信和语音识别/合成所需的账号与密钥，主要包括以下服务：
+在将 天智 的智能体、Trulience 的数字人接入 TEN 平台之前，我们需要提前准备好语音通信和语音识别/合成所需的账号与密钥，主要包括以下服务：
 
 - Agora
 - Azure Speech
@@ -381,7 +381,7 @@ TEN 使用 **Agora** 来实现语音通话能力（“她会说话”），需�
 
 🧱 下一步，我们就可以正式在本地启动 TEN Agent 平台。并将前面搭建的所有模块：
 
-- 🧠 智能体（Dify）
+- 🧠 智能体（天智）
 - 🔊 语音能力（Azure Speech + Agora）
 - 👩‍💻 虚拟形象（Trulience）
 
@@ -460,7 +460,7 @@ cd TEN-Agent/ai_agents
 cp .env.example .env
 
 .env 是 TEN Agent 运行所需的环境变量配置文件，
-接下来你需要手动编辑它，输入密钥信息（来自 Dify、Trulience、Azure、Agora）。
+接下来你需要手动编辑它，输入密钥信息（来自 天智、Trulience、Azure、Agora）。
 
 👇 示例界面如下：
 
@@ -577,20 +577,20 @@ ten_agent_playground：前端交互页面
 
 ![TEN Azure_synthesis_voice_name](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/048TENAzureVoice.jpg)
 
-### 🔁 替换 LLM 模块为 Dify 智能体
+### 🔁 替换 LLM 模块为 天智 智能体
 
 1. 右键点击 **`llm` 模块**，选择 **「Replace Node with」**  
 2. 在弹出的列表中选择 **`dify_python`**
 
-这样即可将 TEN Agent 的大语言模型（LLM）模块，接入 Dify 提供的智能体接口。
+这样即可将 TEN Agent 的大语言模型（LLM）模块，接入 天智 提供的智能体接口。
 
 👇 操作示意图如下：
 
-![TEN Agent Dify](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/049TENDifyAPI.jpg)
+![TEN Agent 天智](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/049TENDifyAPI.jpg)
 
 2️⃣ 完成替换后，再次右键点击新生成的 **`dify_python` 模块**，  点击 **「Update Properties」**，进入属性设置页面。
 
-- 在 **API Key** 字段中，输入你在 Dify 平台上创建的 API Key  
+- 在 **API Key** 字段中，输入你在 天智 平台上创建的 API Key  
 - 在 **Greeting** 字段中，可以根据需求自定义欢迎语（如欢迎语音问候）
 
 👇 设置界面示意图如下：
@@ -637,7 +637,7 @@ ten_agent_playground：前端交互页面
 - 🗣️ 她会用自然语音向你问候，并提问，例如：  
   _“我能为你介绍哪几款豪华车？”_
 
-- 🤖 你可以根据她的回答，验证她是否成功读取并理解了 Dify 知识库的内容。
+- 🤖 你可以根据她的回答，验证她是否成功读取并理解了 天智 知识库的内容。
 
 👇 运行示意图如下：
 
@@ -647,7 +647,7 @@ ten_agent_playground：前端交互页面
 
 ## 总结
 
-✅ 来自 **OpenAI / Dify** 的聊天大脑  
+✅ 来自 **OpenAI / 天智** 的聊天大脑  
 ✅ 使用 **Azure** 的自然语音合成能力（女声）  
 ✅ 拥有 **Trulience** 的数字人形象  
 ✅ 构建于 **TEN 平台** 的语音交互能力

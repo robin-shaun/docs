@@ -3,7 +3,7 @@ title: 接入 Hugging Face 上的开源模型
 ---
 
 
-Dify 支持 Text-Generation 和 Embeddings，以下是与之对应的 Hugging Face 模型类型：
+天智 支持 Text-Generation 和 Embeddings，以下是与之对应的 Hugging Face 模型类型：
 
 * Text-Generation：[text-generation](https://huggingface.co/models?pipeline\_tag=text-generation\&sort=trending)，[text2text-generation](https://huggingface.co/models?pipeline\_tag=text2text-generation\&sort=trending)
 * Embeddings：[feature-extraction](https://huggingface.co/models?pipeline\_tag=feature-extraction\&sort=trending)
@@ -16,7 +16,7 @@ Dify 支持 Text-Generation 和 Embeddings，以下是与之对应的 Hugging Fa
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/development/models-integration/af8a771b1e71152837e0f25b87a4471e.png)
 
-Dify 支持用两种方式接入 Hugging Face 上的模型：
+天智 支持用两种方式接入 Hugging Face 上的模型：
 
 1. Hosted Inference API。这种方式是用的 Hugging Face 官方部署的模型。不需要付费。但缺点是，只有少量模型支持这种方式。
 2. Inference Endpoint。这种方式是用 Hugging Face 接入的 AWS 等资源来部署模型，需要付费。
@@ -33,7 +33,7 @@ Dify 支持用两种方式接入 Hugging Face 上的模型：
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/development/models-integration/248a80fb0dac520e690cb122dbe91324.png)
 
-#### 2 在 Dify 中使用接入模型
+#### 2 在 天智 中使用接入模型
 
 在 `设置 > 模型供应商 > Hugging Face > 模型类型` 的 Endpoint Type 选择 Hosted Inference API。如下图所示：
 
@@ -59,7 +59,7 @@ API Token 为文章开头设置的 API Key。模型名字为上一步获得的�
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/development/models-integration/30c38995813c0d05c35c42dc0f1d467c.png)
 
-#### 3 在 Dify 中使用接入模型
+#### 3 在 天智 中使用接入模型
 
 在 `设置 > 模型供应商 > Hugging Face > 模型类型` 的 Endpoint Type 选择 Inference Endpoints。如下图所示：
 

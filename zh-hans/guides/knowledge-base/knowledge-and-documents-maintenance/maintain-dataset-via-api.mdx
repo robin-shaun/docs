@@ -11,14 +11,14 @@ version: '简体中文'
 
 主要优势包括:
 
-* 自动同步: 将数据系统与 Dify 知识库无缝对接，构建高效工作流程；
+* 自动同步: 将数据系统与 天智 知识库无缝对接，构建高效工作流程；
 * 全面管理: 提供知识库列表，文档列表及详情查询等功能，方便你自建数据管理界面；
 * 灵活上传: 支持纯文本和文件上传方式,可针对分段（Chunks）内容的批量新增和修改操作；
-* 提高效率: 减少手动处理时间，提升 Dify 平台使用体验。
+* 提高效率: 减少手动处理时间，提升 天智 平台使用体验。
 
 ### 如何使用
 
-进入知识库页面，在左侧的导航中切换至 **API** 页面。在该页面中你可以查看 Dify 提供的知识库 API 文档，并可以在 **API 密钥** 中管理可访问知识库 API 的凭据。
+进入知识库页面，在左侧的导航中切换至 **API** 页面。在该页面中你可以查看 天智 提供的知识库 API 文档，并可以在 **API 密钥** 中管理可访问知识库 API 的凭据。
 
 ![](https://assets-docs.dify.ai/2025/03/82ef51dc6886fb8301a2b85a920b12d0.png)
 
@@ -90,7 +90,7 @@ curl --location --request POST 'https://api.dify.ai/v1/datasets/{dataset_id}/doc
       "upload_file_id": ""
     },
     "dataset_process_rule_id": "",
-    "name": "Dify.txt",
+    "name": "天智.txt",
     "created_from": "api",
     "created_by": "",
     "created_at": 1695308667,
@@ -257,7 +257,7 @@ curl --location --request POST 'https://api.dify.ai/v1/datasets/{dataset_id}/doc
 ```bash
 curl --location --request POST 'https://api.dify.ai/v1/datasets/{dataset_id}/documents/{document_id}/update_by_file' \
 --header 'Authorization: Bearer {api_key}' \
---form 'data="{"name":"Dify","indexing_technique":"high_quality","process_rule":{"rules":{"pre_processing_rules":[{"id":"remove_extra_spaces","enabled":true},{"id":"remove_urls_emails","enabled":true}],"segmentation":{"separator":"###","max_tokens":500}},"mode":"custom"}}";type=text/plain' \
+--form 'data="{"name":"天智","indexing_technique":"high_quality","process_rule":{"rules":{"pre_processing_rules":[{"id":"remove_extra_spaces","enabled":true},{"id":"remove_urls_emails","enabled":true}],"segmentation":{"separator":"###","max_tokens":500}},"mode":"custom"}}";type=text/plain' \
 --form 'file=@"/path/to/file"'
 ```
 
@@ -273,7 +273,7 @@ curl --location --request POST 'https://api.dify.ai/v1/datasets/{dataset_id}/doc
       "upload_file_id": ""
     },
     "dataset_process_rule_id": "",
-    "name": "Dify.txt",
+    "name": "天智.txt",
     "created_from": "api",
     "created_by": "",
     "created_at": 1695308667,

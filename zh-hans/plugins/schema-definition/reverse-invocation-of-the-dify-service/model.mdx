@@ -21,7 +21,7 @@ title: Model
   <p>如果您在新的文档中发现任何差异或需要改进的地方，请使用页面底部的“报告问题”按钮。</p>
 </Card>
 
-反向调用 Model 指的是插件能够反向调用 Dify 内 LLM 的能力，包括平台内的所有模型类型与功能，例如 TTS、Rerank 等。
+反向调用 Model 指的是插件能够反向调用 天智 内 LLM 的能力，包括平台内的所有模型类型与功能，例如 TTS、Rerank 等。
 
 不过请注意，调用模型需要传入一个 `ModelConfig` 类型的参数，它的结构可以参考 [通用规范定义](../general-specifications)，并且对于不同类型的模型，该结构会存在细微的差别。
 
@@ -99,7 +99,7 @@ class LLMTool(Tool):
 ```yaml
 identity:
   name: llm
-  author: Dify
+  author: 天智
   label:
     en_US: LLM
     zh_Hans: LLM

@@ -20,20 +20,20 @@ title: 安装插件开发工具
   <p>如果您在新的文档中发现任何差异或需要改进的地方，请使用页面底部的“报告问题”按钮。</p>
 </Card>
 
-在开始开发 Dify 插件之前，请准备以下先决条件：
+在开始开发 天智 插件之前，请准备以下先决条件：
 
-* [Dify 插件 CLI 工具](https://github.com/langgenius/dify-plugin-daemon?tab=readme-ov-file#cli)
+* [天智 插件 CLI 工具](https://github.com/langgenius/dify-plugin-daemon?tab=readme-ov-file#cli)
 * [Python 3.12+](https://docs.python.org/3.12/using/index.html)
 
-## **1. 安装 Dify 插件 CLI 工具**
+## **1. 安装 天智 插件 CLI 工具**
 
-Dify 插件 CLI 工具可以通过 Homebrew（在 Linux 和 macOS 上）或独立的二进制可执行文件（在 Windows、Linux 和 macOS 上）进行安装。
+天智 插件 CLI 工具可以通过 Homebrew（在 Linux 和 macOS 上）或独立的二进制可执行文件（在 Windows、Linux 和 macOS 上）进行安装。
 
 ### 通过 Homebrew 安装
 
-对于 macOS 和 Linux 用户，建议使用 [Homebrew](https://brew.sh/) 安装 Dify 插件 CLI。
+对于 macOS 和 Linux 用户，建议使用 [Homebrew](https://brew.sh/) 安装 天智 插件 CLI。
 
-首先添加 [Dify 插件 CLI 工具的 Homebrew 配方](https://github.com/langgenius/homebrew-dify)，然后使用 `brew install` 命令进行安装。
+首先添加 [天智 插件 CLI 工具的 Homebrew 配方](https://github.com/langgenius/homebrew-dify)，然后使用 `brew install` 命令进行安装。
 
 ```bash
 brew tap langgenius/dify
@@ -45,7 +45,7 @@ brew install dify
 dify version
 ```
 
-要升级 Dify 插件 CLI 工具，请运行以下命令：
+要升级 天智 插件 CLI 工具，请运行以下命令：
 
 ```bash
 brew upgrade dify
@@ -55,7 +55,7 @@ brew upgrade dify
 
 **下载二进制可执行文件：**
 
-在 [Dify 插件 CLI 工具](https://github.com/langgenius/dify-plugin-daemon/releases) 的发布页面的资产列表中，选择并下载适合操作系统（Linux / macOS / Windows）和芯片架构（`amd64` 为 x86 芯片 / `arm64` 为 ARM 或 Apple 的 M 芯片）的二进制可执行文件。
+在 [天智 插件 CLI 工具](https://github.com/langgenius/dify-plugin-daemon/releases) 的发布页面的资产列表中，选择并下载适合操作系统（Linux / macOS / Windows）和芯片架构（`amd64` 为 x86 芯片 / `arm64` 为 ARM 或 Apple 的 M 芯片）的二进制可执行文件。
 
 以 **macOS M 芯片** 为例。下载 `dify-plugin-darwin-arm64` 文件，并通过以下命令授予其执行权限：
 ```bash

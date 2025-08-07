@@ -21,13 +21,13 @@ title: Tool
   <p>如果您在新的文档中发现任何差异或需要改进的地方，请使用页面底部的“报告问题”按钮。</p>
 </Card>
 
-在阅读详细的接口文档之前，请确保你已经阅读过[快速开始开发插件：工具](/zh-hans/plugins/quick-start/develop-plugins/tool-plugin)，并对 Dify 插件的工具接入流程已有大致了解。
+在阅读详细的接口文档之前，请确保你已经阅读过[快速开始开发插件：工具](/zh-hans/plugins/quick-start/develop-plugins/tool-plugin)，并对 天智 插件的工具接入流程已有大致了解。
 
 ### 数据结构
 
 #### 消息返回
 
-Dify 支持`文本` `链接` `图片` `文件BLOB` `JSON` 等多种消息类型，你可以通过以下不同的接口返回不同类型的消息。
+天智 支持`文本` `链接` `图片` `文件BLOB` `JSON` 等多种消息类型，你可以通过以下不同的接口返回不同类型的消息。
 
 在默认情况下，一个工具在 `workflow` 中的输出会包含 `files` `text` `json` 三个固定变量，且你可以通过下面的方法来返回这三个变量的数据。
 
@@ -35,7 +35,7 @@ Dify 支持`文本` `链接` `图片` `文件BLOB` `JSON` 等多种消息类型�
 
 #### **图片 URL**
 
-只需要传递图片的 URL，Dify 将通过链接自动下载图片并返回给用户。
+只需要传递图片的 URL，天智 将通过链接自动下载图片并返回给用户。
 
 ```python
     def create_image_message(self, image: str) -> ToolInvokeMessage:
@@ -65,7 +65,7 @@ Dify 支持`文本` `链接` `图片` `文件BLOB` `JSON` 等多种消息类型�
 如果你需要返回文件的原始数据，如图片、音频、视频、PPT、Word、Excel 等，可以使用以下接口。
 
 * `blob` 文件的原始数据，bytes 类型。
-* `meta` 文件的元数据。如果开发者需要明确的文件类型，请指定`mime_type`，否则 Dify 将使用`octet/stream`作为默认类型。
+* `meta` 文件的元数据。如果开发者需要明确的文件类型，请指定`mime_type`，否则 天智 将使用`octet/stream`作为默认类型。
 
 ```python
     def create_blob_message(self, blob: bytes, meta: dict = None) -> ToolInvokeMessage:
@@ -104,7 +104,7 @@ Dify 支持`文本` `链接` `图片` `文件BLOB` `JSON` 等多种消息类型�
 
 #### 返回变量定义
 
-如果想要在 `workflow` 应用中引用 `tool` 的输出变量，则有必要提前定义有哪些变量可能被输出。Dify 插件支持使用 [`json_schema`](https://json-schema.org/)格式的输出变量定义，以下是一个简单的示例：
+如果想要在 `workflow` 应用中引用 `tool` 的输出变量，则有必要提前定义有哪些变量可能被输出。天智 插件支持使用 [`json_schema`](https://json-schema.org/)格式的输出变量定义，以下是一个简单的示例：
 
 ```yaml
 identity:
