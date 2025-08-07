@@ -43,14 +43,7 @@
                                         "zh-hans/guides/application-orchestrate/multiple-llms-debugging"
                                     ]
                                 },
-                                "zh-hans/guides/application-orchestrate/agent",
-                                {
-                                    "group": "应用工具箱",
-                                    "pages": [
-                                        "zh-hans/guides/application-orchestrate/app-toolkits/readme",
-                                        "zh-hans/guides/application-orchestrate/app-toolkits/moderation-tool"
-                                    ]
-                                }
+                                "zh-hans/guides/application-orchestrate/agent"
                             ]
                         },
                         {
