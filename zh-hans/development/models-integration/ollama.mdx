@@ -22,7 +22,7 @@ title: 接入 Ollama 部署的本地模型
 
     如需运行其它模型，访问 [Ollama Models](https://ollama.com/library) 了解详情。
 
-3. 在 天智 中接入 Ollama
+3. 在天智中接入 Ollama
 
    在 `设置 > 模型供应商 > Ollama` 中填入：
 
@@ -34,7 +34,7 @@ title: 接入 Ollama 部署的本地模型
    
      此处需填写 Ollama 服务地址。如果填写公开 URL 后仍提示报错，请参考[常见问题](#如何在我的网络上暴露-ollama)，修改环境变量并使得 Ollama 服务可被所有 IP 访问。
    
-     若 天智 为 Docker 部署，建议填写局域网 IP 地址，例如：`http://192.168.1.100:11434` 或 Docker 容器的内部 IP 地址，例如：`http://host.docker.internal:11434`。
+     若天智为 Docker 部署，建议填写局域网 IP 地址，例如：`http://192.168.1.100:11434` 或 Docker 容器的内部 IP 地址，例如：`http://host.docker.internal:11434`。
    
      若为本地源码部署，可填写 `http://localhost:11434`。
 
@@ -64,7 +64,7 @@ title: 接入 Ollama 部署的本地模型
 
 ## FAQ
 
-### ⚠️ 如果你使用 Docker 部署 天智 和 Ollama，你可能会遇到以下错误:
+### ⚠️ 如果你使用 Docker 部署天智和 Ollama，你可能会遇到以下错误:
 
 ```bash
 httpconnectionpool (host=127.0.0.1, port=11434): max retries exceeded with url:/cpi/chat (Caused by NewConnectionError ('<urllib3.connection.HTTPConnection object at 0x7f8562812c20>: fail to establish a new connection:[Errno 111] Connection refused'))

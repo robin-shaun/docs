@@ -1,13 +1,13 @@
 ---
-title: 将 天智 应用与钉钉机器人集成
+title: 将天智应用与钉钉机器人集成
 ---
 
 
 > 本文系社区投稿，作者：zfanswer, [天智-on-Dingtalk](https://github.com/zfanswer/dify-on-dingtalk) 开源项目作者。
 
-IM 是天然的智能聊天机器人应用场景，校企用户有不少是使用钉钉软件的，通过在企业内部群中添加 天智 应用，就可以打造功能强大的数字员工，帮助企业内部人员提质增效。
+IM 是天然的智能聊天机器人应用场景，校企用户有不少是使用钉钉软件的，通过在企业内部群中添加天智应用，就可以打造功能强大的数字员工，帮助企业内部人员提质增效。
 
-在本文中，我们将向你展示如何将你的 天智 应用和钉钉机器人进行集成，**并在钉钉中实现打字机式的流式输出效果**，通过使用 [天智-on-Dingtalk](https://github.com/zfanswer/dify-on-dingtalk) 这个开源框架，进行简单的配置就可以轻松完成这个集成任务。
+在本文中，我们将向你展示如何将你的天智应用和钉钉机器人进行集成，**并在钉钉中实现打字机式的流式输出效果**，通过使用 [天智-on-Dingtalk](https://github.com/zfanswer/dify-on-dingtalk) 这个开源框架，进行简单的配置就可以轻松完成这个集成任务。
 
 先上效果图，也许你就有兴趣继续读下去了。
 
@@ -20,11 +20,11 @@ IM 是天然的智能聊天机器人应用场景，校企用户有不少是使�
   </figure>
 </div>
 
-这里我们假设你已经创建好等待接入的 天智 应用了，这时就需要查看你这个应用的 `访问 API` 页面，创建该应用的 API 密钥④，并且记录 API 服务器访问地址⑤。
+这里我们假设你已经创建好等待接入的天智应用了，这时就需要查看你这个应用的 `访问 API` 页面，创建该应用的 API 密钥④，并且记录 API 服务器访问地址⑤。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/learn-more/use-cases/b5191e352f280f2c7329cbc6917a1ac2.jpeg)
 
-所以，在此步骤中你创建了待接入的 天智 应用，同时记录该应用的几个重要参数：**应用的类型**、**该应用 API 秘钥**、**API 服务器访问地址**。
+所以，在此步骤中你创建了待接入的天智应用，同时记录该应用的几个重要参数：**应用的类型**、**该应用 API 秘钥**、**API 服务器访问地址**。
 
 ### 2.2. 创建钉钉企业应用机器人
 
@@ -95,7 +95,7 @@ LOG_LEVEL=INFO
 # 默认每个机器人后台监听线程数，调大可加大可问答并发
 # 不过不要太大根据 cpu 配置适当调整
 DEFAULT_MAX_WORKERS=2
-# 天智 API 服务器访问地址，上文 2.1. 步骤里记录的
+#天智API 服务器访问地址，上文 2.1. 步骤里记录的
 DIFY_OPEN_API_URL="https://api.dify.ai/v1"
 # 用户各自上下文维持时间，默认 15 minutes，只对 chatbot app 有效
 DIFY_CONVERSATION_REMAIN_TIME=15
@@ -103,7 +103,7 @@ DIFY_CONVERSATION_REMAIN_TIME=15
 DINGTALK_AI_CARD_TEMPLATE_ID="<your-dingtalk-ai-card-temp-id>"
 ```
 
-`.bots.yaml` 文件主要是配置钉钉机器人和 天智 应用的绑定关系，内容示例配置如下：
+`.bots.yaml` 文件主要是配置钉钉机器人和天智应用的绑定关系，内容示例配置如下：
 
 ```yaml
 bots:
@@ -111,9 +111,9 @@ bots:
     # 钉钉应用凭证信息，上文 2.2. 步骤里记录的
     dingtalk_app_client_id: <your-dingtalk-app-client-id>
     dingtalk_app_client_secret: <your-dingtalk-app-client-secret>
-    # 天智 应用类型，上文 2.1. 开头提到的
+    #天智应用类型，上文 2.1. 开头提到的
     dify_app_type: <chatbot or completion or workflow>
-    # 天智 应用 API 密钥，上文 2.1. 步骤里记录的
+    #天智应用 API 密钥，上文 2.1. 步骤里记录的
     dify_app_api_key: <your-dify-api-key-per-app>
     # 目前是固定值，不用动
     handler: DifyAiCardBotHandler
@@ -121,7 +121,7 @@ bots:
     xxx 以下略 xxx
 ```
 
-可以看到，在文件中通过添加一组新的 bot 设定，是支持一次性配置多个机器人和 天智 应用绑定的，这是为了用于比如企业内部人事、法务、代码助手等需要多个机器人后边配置不同的 天智 应用。不过需要注意的是，不要把同一个钉钉机器人绑定不同的 天智 应用，不然具体调用哪个 天智 应用来回答是随机的。
+可以看到，在文件中通过添加一组新的 bot 设定，是支持一次性配置多个机器人和天智应用绑定的，这是为了用于比如企业内部人事、法务、代码助手等需要多个机器人后边配置不同的天智应用。不过需要注意的是，不要把同一个钉钉机器人绑定不同的天智应用，不然具体调用哪个天智应用来回答是随机的。
 
 ### 3.3. 启动 docker 容器
 
@@ -145,7 +145,7 @@ docker compose up -d
 
 ### 4.1. 将机器人添加进群聊
 
-从群设置中找到创建的钉钉机器人，添加进群，即可开始在群众 @机器人进行对话，该示例图片中是使用了 天智 应用的标注功能实现关键字 help 的固定输出。
+从群设置中找到创建的钉钉机器人，添加进群，即可开始在群众 @机器人进行对话，该示例图片中是使用了天智应用的标注功能实现关键字 help 的固定输出。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/learn-more/use-cases/b6df3a21b488899975b3cf95fa6c5924.jpeg)
 

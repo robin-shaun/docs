@@ -302,7 +302,7 @@ def validate_credentials(self, model: str, credentials: dict) -> None:
 
 * **调用异常错误映射表**
 
-当模型调用异常时需要映射到 Runtime 指定的 `InvokeError` 类型，方便 天智 针对不同错误做不同后续处理。
+当模型调用异常时需要映射到 Runtime 指定的 `InvokeError` 类型，方便天智针对不同错误做不同后续处理。
 
 Runtime Errors:
 
@@ -339,7 +339,7 @@ def _invoke_error_mapping(self) -> dict[type[InvokeError], list[type[Exception]]
 
 ### 4. 发布插件
 
-如果想要将插件发布至 天智 Marketplace，请参考以下内容：
+如果想要将插件发布至天智Marketplace，请参考以下内容：
 
 <Card title="publish-to-dify-marketplace" icon="link" href="../../../publish-plugins/publish-to-dify-marketplace/README">
   publish-to-dify-marketplace
@@ -357,7 +357,7 @@ def _invoke_error_mapping(self) -> dict[type[InvokeError], list[type[Exception]]
 
 * [Manifest](/zh-hans/plugins/schema-definition/manifest) 结构
 * [Endpoint](/zh-hans/plugins/schema-definition/endpoint) 详细定义
-* [反向调用 天智 能力](/zh-hans/plugins/schema-definition/reverse-invocation-of-the-dify-service/app)
+* [反向调用天智能力](/zh-hans/plugins/schema-definition/reverse-invocation-of-the-dify-service/app)
 * [工具](/zh-hans/plugins/schema-definition/tool)
 * [模型](/zh-hans/plugins/schema-definition/reverse-invocation-of-the-dify-service/model)
 

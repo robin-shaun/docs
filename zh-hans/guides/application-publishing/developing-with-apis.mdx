@@ -4,7 +4,7 @@ title: 基于 APIs 开发
 
 天智 基于“**后端即服务**”理念为所有应用提供了 API，为 AI 应用开发者带来了诸多便利。通过这一理念，开发者可以直接在前端应用中获取大型语言模型的强大能力，而无需关注复杂的后端架构和部署过程。
 
-#### 使用 天智 API 的好处
+#### 使用天智API 的好处
 
 * 让前端应用直接安全地调用 LLM 能力，省去后端服务的开发过程
 * 在可视化的界面中设计应用，并在所有客户端中实时生效
@@ -15,7 +15,7 @@ title: 基于 APIs 开发
 
 #### 如何使用
 
-选择一个应用，在应用（Apps）左侧导航中可以找到**访问 API（API Access）**。在该页面中你可以查看 天智 提供的 API 文档，并管理可访问 API 的凭据。
+选择一个应用，在应用（Apps）左侧导航中可以找到**访问 API（API Access）**。在该页面中你可以查看天智提供的 API 文档，并管理可访问 API 的凭据。
 
 ![访问 API](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/guides/application-publishing/97ff5a5d3fd280c617af917ca6c09322.png)
 
@@ -29,7 +29,7 @@ title: 基于 APIs 开发
 
 #### 文本生成型应用
 
-可用于生成高质量文本的应用，例如生成文章、摘要、翻译等，通过调用 completion-messages 接口，发送用户输入得到生成文本结果。用于生成文本的模型参数和提示词模板取决于开发者在 天智 提示词编排页的设置。
+可用于生成高质量文本的应用，例如生成文章、摘要、翻译等，通过调用 completion-messages 接口，发送用户输入得到生成文本结果。用于生成文本的模型参数和提示词模板取决于开发者在天智提示词编排页的设置。
 
 你可以在**应用 -> 访问 API** 中找到该应用的 API 文档与范例请求。
 
@@ -77,7 +77,7 @@ print(response.text)
 #### `conversation_id` 的注意事项：
 
 - **生成 `conversation_id`：** 开始新对话时，请将 `conversation_id` 字段留空。系统将生成并返回一个新的 `conversation_id`，未来的交互中会使用该 `conversation_id` 继续对话。
-- **处理现有会话中的 `conversation_id`：** 生成 `conversation_id` 后，对 API 的未来调用应包含此 `conversation_id`，以确保与 天智 机器人的对话连续性。传递上一个 `conversation_id` 时，将忽略任何新的 `inputs`，仅处理正在进行的对话的 `query`。
+- **处理现有会话中的 `conversation_id`：** 生成 `conversation_id` 后，对 API 的未来调用应包含此 `conversation_id`，以确保与天智机器人的对话连续性。传递上一个 `conversation_id` 时，将忽略任何新的 `inputs`，仅处理正在进行的对话的 `query`。
 - **管理动态变量：** 如果在会话期间需要修改逻辑或变量，你可以使用会话变量（特定于会话的变量）来调整 bot 的行为或回应。
 
 你可以在**应用 -> 访问 API** 中找到该应用的 API 文档与范例请求。

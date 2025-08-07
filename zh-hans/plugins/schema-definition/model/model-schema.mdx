@@ -81,7 +81,7 @@ def validate_credentials(self, model: str, credentials: dict) -> None:
 
 * 调用异常错误映射表
 
-当模型调用异常时需要映射到 Runtime 指定的 `InvokeError` 类型，方便 天智 针对不同错误做不同后续处理。Runtime Errors:
+当模型调用异常时需要映射到 Runtime 指定的 `InvokeError` 类型，方便天智针对不同错误做不同后续处理。Runtime Errors:
 
 * `InvokeConnectionError` 调用连接错误
 * `InvokeServerUnavailableError` 调用服务方不可用

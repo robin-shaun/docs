@@ -97,7 +97,7 @@ FileNotFoundError: File not found
 
 ### 10. 为什么 Docker 部署 天智，本地启动 OpenLLM 用 127.0.0.1 却无法访问本地的端口？
 
-127.0.0.1 是容器内部地址， 天智 配置的服务器地址需要宿主机局域网 IP 地址。
+127.0.0.1 是容器内部地址，天智配置的服务器地址需要宿主机局域网 IP 地址。
 
 ### 11. 本地部署版如何解决知识库文档上传的大小限制和数量限制。
 
@@ -236,7 +236,7 @@ docker ps -q | xargs -n 1 docker inspect --format '{{ .Name }}: {{range .Network
 /docker-api-1: 172.19.0.7
 ```
 
-记录 IP 地址，打开 天智 源代码路径，打开 `dify/docker/nginx/conf.d` 文件，将 `http://api:5001` 替换为 `http://172.19.0.7:5001`，将 `http://web:3000` 替换为 `http://172.19.0.5:3000`，随后重启 Nginx 容器或者重载配置。
+记录 IP 地址，打开天智源代码路径，打开 `dify/docker/nginx/conf.d` 文件，将 `http://api:5001` 替换为 `http://172.19.0.7:5001`，将 `http://web:3000` 替换为 `http://172.19.0.5:3000`，随后重启 Nginx 容器或者重载配置。
 
 <Warning>
    以上 IP 地址仅供参考，在实际的命令执行过程中请替换为实际 IP 地址。
@@ -250,7 +250,7 @@ docker ps -q | xargs -n 1 docker inspect --format '{{ .Name }}: {{range .Network
 
 ### 22. 如何修改 API 服务的端口号？
 
-API 服务与 天智 平台使用的端口号相一致。你可以通过修改 `docker-compose.yaml` 文件内的 `nginx` 配置项，重新指定运行端口。
+API 服务与天智平台使用的端口号相一致。你可以通过修改 `docker-compose.yaml` 文件内的 `nginx` 配置项，重新指定运行端口。
 
 ### 23. 如何删除旧日志和未使用的文件以减少存储使用量？
 

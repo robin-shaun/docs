@@ -3,12 +3,12 @@ title: 如何连接 AWS Bedrock 知识库？
 ---
 
 
-本文将简要介绍如何通过外部知识库 API 将 天智 平台与 AWS Bedrock 知识库相连接，使得 天智 平台内的 AI 应用能够直接获取存储在 AWS Bedrock 知识库中的内容，扩展新的信息来源渠道。
+本文将简要介绍如何通过外部知识库 API 将天智平台与 AWS Bedrock 知识库相连接，使得天智平台内的 AI 应用能够直接获取存储在 AWS Bedrock 知识库中的内容，扩展新的信息来源渠道。
 
 ### 前置准备
 
 * AWS Bedrock Knowledge Base
-* 天智 SaaS 服务 / 天智 社区版
+*天智SaaS 服务 /天智社区版
 * 后端 API 开发基础知识
 
 ### 1. 注册并创建 AWS Bedrock Knowledge Base
@@ -19,7 +19,7 @@ title: 如何连接 AWS Bedrock 知识库？
 
 ### 2. 构建后端 API 服务
 
-天智 平台尚不能直接连接 AWS Bedrock Knowledge Base，需要开发团队参考 天智 关于外部知识库连接的 [API 定义](../../guides/knowledge-base/external-knowledge-api-documentation)，手动创建后端 API 服务，建立与 AWS Bedrock 的连接。具体架构示意图请参考：
+天智 平台尚不能直接连接 AWS Bedrock Knowledge Base，需要开发团队参考天智关于外部知识库连接的 [API 定义](../../guides/knowledge-base/external-knowledge-api-documentation)，手动创建后端 API 服务，建立与 AWS Bedrock 的连接。具体架构示意图请参考：
 
 ![构建后端 API 服务](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/learn-more/use-cases/c57ce0a77ee668268f53e91497bd5c2b.png)
 
@@ -118,17 +118,17 @@ class ExternalDatasetService:
 
 ### 3. 获取 AWS Bedrock Knowledge Base ID
 
-登录 AWS Bedrock Knowledge 后台，获取已创建 Knowledge Base 的 ID。此参数将会在[后续步骤](how-to-connect-aws-bedrock.md#id-5.-lian-jie-wai-bu-zhi-shi-ku)用于与 天智 平台的连接。
+登录 AWS Bedrock Knowledge 后台，获取已创建 Knowledge Base 的 ID。此参数将会在[后续步骤](how-to-connect-aws-bedrock.md#id-5.-lian-jie-wai-bu-zhi-shi-ku)用于与天智平台的连接。
 
 ![获取 AWS Bedrock Knowledge Base ID](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/learn-more/use-cases/03fd7e383daf419765bbfd05c3742923.png)
 
 ### 4. 关联外部知识 API
 
-前往 天智 平台中的 **“知识库”** 页，点击右上角的 **“外部知识库 API”**，轻点 **“添加外部知识库 API”**。
+前往天智平台中的 **“知识库”** 页，点击右上角的 **“外部知识库 API”**，轻点 **“添加外部知识库 API”**。
 
 按照页面提示，依次填写以下内容：
 
-* 知识库的名称，允许自定义名称，用于区分 天智 平台内所连接的不同外部知识 API；
+* 知识库的名称，允许自定义名称，用于区分天智平台内所连接的不同外部知识 API；
 * API 接口地址，外部知识库的连接地址，可在[第二步](how-to-connect-aws-bedrock.md#id-2.-gou-jian-hou-duan-api-fu-wu)中自定义。示例 `api-endpoint/retrieval`；
 * API Key，外部知识库连接密钥，可在[第二步](how-to-connect-aws-bedrock.md#id-2.-gou-jian-hou-duan-api-fu-wu)中自定义。
 

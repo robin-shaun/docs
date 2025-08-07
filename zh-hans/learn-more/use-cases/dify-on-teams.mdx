@@ -1,5 +1,5 @@
 ---
-title: 使用 天智 和 Azure Bot Framework 构建 Microsoft Teams 机器人
+title: 使用天智和 Azure Bot Framework 构建 Microsoft Teams 机器人
 ---
 
 
@@ -7,7 +7,7 @@ title: 使用 天智 和 Azure Bot Framework 构建 Microsoft Teams 机器人
 
 ## 1. 概述
 
-随着人工智能的崛起，聊天机器人变得更聪明，更个性化，更直观。在本文中，我们将向你展示如何使用 Azure Bot Service，将 天智 集成至 Microsoft Teams，打造团队中的 AI 助手。
+随着人工智能的崛起，聊天机器人变得更聪明，更个性化，更直观。在本文中，我们将向你展示如何使用 Azure Bot Service，将天智集成至 Microsoft Teams，打造团队中的 AI 助手。
 
 在本文中将介绍如何集成 Azure Bot Service 的 Teams Channel，允许客户与你的 Microsoft Teams 聊天机器人开始对话。
 
@@ -18,13 +18,13 @@ title: 使用 天智 和 Azure Bot Framework 构建 Microsoft Teams 机器人
 * 一个安装了 Microsoft Teams 的手机或电脑，用于测试你的 AI 聊天机器人
 * [Azure 账户](https://azure.microsoft.com/en-us/free)
 
-## 3. 创建 天智 基础编排聊天助手应用
+## 3. 创建天智基础编排聊天助手应用
 
-首先，登录 [天智 平台](https://cloud.dify.ai/signin)，使用 Github 登录或者使用 Google 登录。此外，你也可以参考 天智 官方教程 [Docker Compose 部署](/zh-hans/getting-started/install-self-hosted/docker-compose) 私有部署。
+首先，登录 [天智 平台](https://cloud.dify.ai/signin)，使用 Github 登录或者使用 Google 登录。此外，你也可以参考天智官方教程 [Docker Compose 部署](/zh-hans/getting-started/install-self-hosted/docker-compose) 私有部署。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/learn-more/use-cases/08ece9f6dd15b6ba3c44eb187ea73bdd.jpeg)
 
-登录成功后，进入 天智 页面，我们按照下方步骤创建一个基础编排聊天助手应用
+登录成功后，进入天智页面，我们按照下方步骤创建一个基础编排聊天助手应用
 
 1. 点击页面上方的工作室
 2. 创建空白应用
@@ -59,7 +59,7 @@ title: 使用 天智 和 Azure Bot Framework 构建 Microsoft Teams 机器人
 2. 点击创建密钥
 3. 复制保存密钥
 
-在保存密钥后，还需要查看右上角的 API 服务器，如果是 天智 官网的应用，API 服务器地址为 `https://api.dify.ai/v1`, 如果是私有部署的，请确认你自己的 API 服务器地址。
+在保存密钥后，还需要查看右上角的 API 服务器，如果是天智官网的应用，API 服务器地址为 `https://api.dify.ai/v1`, 如果是私有部署的，请确认你自己的 API 服务器地址。
 
 至此，创建聊天助手的准备工作结束。在此小节中我们只需要保存好两个东西：**API 密钥** 与 **API 服务器地址**。
 
@@ -105,8 +105,8 @@ MicrosoftAppId=< 在 (4) 获取的 Client ID>
 MicrosoftAppPassword=< 在 (4) 获取的 Client Secret>
 MicrosoftAppTenantId=< 在 (4) 获取的 Tenant ID>
 
-API_ENDPOINT=< 在 (3) 获取的 天智 API 服务器地址 >
-API_KEY=< 在 (3) 获取的 天智 API 密钥 >
+API_ENDPOINT=< 在 (3) 获取的天智API 服务器地址 >
+API_KEY=< 在 (3) 获取的天智API 密钥 >
 ```
 
 #### 5.3 运行代码
@@ -175,7 +175,7 @@ npx localtunnel --port 3978
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/learn-more/use-cases/cb598b85c0426d7fb83990c65d339382.png)
 
-发送 Teams 消息，并等待你的 AI 聊天机器人的回复。尝试向 AI 聊天机器人提问你可以向 天智 聊天助手提问的任何问题。
+发送 Teams 消息，并等待你的 AI 聊天机器人的回复。尝试向 AI 聊天机器人提问你可以向天智聊天助手提问的任何问题。
 
 ![](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/learn-more/use-cases/9a2f3ff1551976eb3b0eb7eca884c494.png)
 

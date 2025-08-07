@@ -23,15 +23,15 @@ title: Bundle 插件包
 
 Bundle 插件包是多个插件的集合。它可以将多个插件打包在一个插件内，以达到批量安装插件的效果，同时提供更强大的服务。
 
-你可以通过 天智 cli 工具将多个插件打包为 Bundle。Bundle 插件包提供三种类型，分别为：
+你可以通过天智cli 工具将多个插件打包为 Bundle。Bundle 插件包提供三种类型，分别为：
 
-* `Marketplace` 类型。储存了插件的 id 与版本信息。导入时会通过 天智 Marketplace 下载具体的插件包。
-* `GitHub` 类型。储存了 GitHub 的仓库地址、 release 版本号和 asset 文件名。导入时 天智 会访问对应的 GitHub 仓库下载插件包。
+* `Marketplace` 类型。储存了插件的 id 与版本信息。导入时会通过天智Marketplace 下载具体的插件包。
+* `GitHub` 类型。储存了 GitHub 的仓库地址、 release 版本号和 asset 文件名。导入时天智会访问对应的 GitHub 仓库下载插件包。
 * `Package` 类型。插件包会直接被储存在 Bundle 中。它不储存引用源，但可能会造成 Bundle 包体积较大的问题。
 
 ### 前置准备
 
-* 天智 插件脚手架工具
+*天智插件脚手架工具
 * Python 环境，版本号 ≥ 3.10
 
 关于如何准备插件开发的脚手架工具，详细说明请参考[安装插件开发工具](initialize-development-tools)。
