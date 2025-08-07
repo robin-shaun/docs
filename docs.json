@@ -22,7 +22,7 @@
                             "group": "欢迎使用天智MaaS平台",
                             "pages": [
                                 "zh-hans/introduction",
-                                "zh-hans/guides/model-configuration/"   
+                                "zh-hans/guides/model-configuration/readme"   
                             ]
                         },
                         "zh-hans/openapi-api-access-readme"
